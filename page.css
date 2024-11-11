@@ -1,0 +1,286 @@
+    /* Reset CSS */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Body styles */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: url('background.png') no-repeat center center fixed;
+        background-size: cover;
+        color: #333; /* Default text color */
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    /* Overlay background */
+    body::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6); /* Black with 60% opacity */
+        z-index: -1; /* Place it behind other elements */
+    }
+
+    /* Header styles */
+    header {
+        background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent background */
+        color: #fff;
+        padding: 20px 0;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        color: #ffd700; /* Change color on hover */
+    }
+
+    /* Main content styles */
+    main {
+        padding: 50px;
+        text-align: center;
+        color: #fff;
+        flex: 1;
+    }
+
+    section {
+        margin: 100px 0;
+    }
+
+    #home {
+        margin-top: 50px; /* Added margin to move the content up */
+    }
+
+    h1, h2 {
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-weight: bold;
+    }
+
+    h1 {
+        font-family: 'Montserrat', sans-serif; /* Use Montserrat or a similar font */
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        line-height: 1.6;
+    }
+
+    /* Logo styles */
+    .logo {
+        max-width: 330px; /* Increased size */
+        margin-bottom: 20px; /* Adjusted spacing */
+    }
+
+    /* About image styles */
+    .about-img {
+        max-width: 100%;
+        height: auto;
+        margin: 20px 0;
+    }
+
+    /* Styles for the About section */
+    /* Styles for the About section */
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 50px; /* Adjusted margin */
+    }
+
+    .about-content h3 {
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 10px; /* Adjust margin as needed */
+        color: #ffd700; /* Stylish color */
+    }
+
+    .mod-description {
+        font-family: 'Pacifico', cursive; /* Use a more stylish font */
+        font-size: 1.5rem; /* Adjust font size as needed */
+        margin-bottom: 10px; /* Adjust margin as needed */
+        color: #fff;
+    }
+
+
+    /* Slider styles */
+    .slider {
+        position: relative;
+        width: 80%;
+        margin: 20px auto;
+        overflow: hidden;
+    }
+
+    .slide {
+        display: flex;
+        width: 100%;
+        transition: transform 0.5s ease;
+    }
+
+    .slide img {
+        width: 100%; 
+        height: auto;
+    }
+
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .prev {
+        left: 0;
+    }
+
+    .next {
+        right: 0;
+    }
+
+    /* Button styles */
+    .btn {
+        background-color: #ffd700;
+        color: #2a2a2a;
+        padding: 15px 30px;
+        text-decoration: none;
+        border-radius: 30px;
+        font-size: 1.2rem;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+        background-color: #e6ac00; /* Darker yellow on hover */
+    }
+
+    /* Footer styles */
+    footer {
+        background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent background */
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+        width: 100%;
+    }
+
+    /* Form styles */
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form label, form input, form textarea {
+        width: 100%;
+        max-width: 400px;
+        margin: 15px 0;
+    }
+
+    form button {
+        background-color: #ffd700;
+        color: #000000;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 30px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+        background-color: #e6ac00; /* Darker yellow on hover */
+    }
+
+    /* Instagram logo styles */
+    .instagram-logo {
+        width: 40px; /* Adjust width as needed */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 10px; /* Adjust spacing between logo and other social icons */
+    }
+
+    /* Custom style for yellow text */
+    .yellow-text {
+        color: #ffd700;
+    }
+    .notification {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007bff; /* Gunakan warna biru yang keren */
+        color: #fff;
+        padding: 15px 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        font-size: 1rem;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(100px);
+        transition: all 0.5s ease-in-out;
+        z-index: 1000;
+    }
+    
+    .notification.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    
+    .notification.error {
+        background-color: #dc3545; /* Gunakan warna merah untuk kesalahan */
+    }
+    
+    /* Tambahkan efek hover */
+    .notification:hover {
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        transform: translateY(0);
+    }
+    
+    /* Tambahkan animasi saat muncul */
+    @keyframes slideInFromBottom {
+        0% {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    
+    .notification {
+        animation: slideInFromBottom 0.5s ease-out forwards;
+    }
+    
+

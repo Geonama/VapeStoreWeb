@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VapeSTORE</title>
+    <link rel="stylesheet" href="page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-PMHkcIOgNKchFpAEngVNZH6WvUZFcXpSN9l3pYZTowXnS+iDvPv9DHM4M7qZ5o3+" crossorigin="anonymous">
+   
+    <style>
+        /* Example animation */
+        @keyframes slideInFromLeft {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .about-content h3 {
+            animation: slideInFromLeft 1s ease forwards;
+        }
+
+        .mod-description {
+            animation: slideInFromLeft 1s ease 0.5s forwards;
+        }
+
+        /* Change color of username to white */
+        .social-icons a span {
+            color: #fff; /* Change font color to white */
+        }
+
+        /* Sponsor logos styles */
+        .sponsor-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .sponsor-logos img {
+            max-width: 150px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <img src="logo.png" alt="Tomkur Logo" class="logo">
+            <h1>VAPORIZE STORE</h1>
+            <p>Solution For Vapes & Smoke</p>
+            <a href="register.html" class="btn">Get Started</a>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <h3>HOTCIG R234 CYBER LIMITED EDITION!!</h3>
+                <p class="mod-description">READY!! MOD Box</p>
+                <img src="all.png" alt="About Image" class="about-img">
+            </div>
+        </section>
+
+        <section id="features">
+            <h2 class="yellow-text">New Color CYBER</h2>
+            <div class="slider">
+                <button class="prev" onclick="plusFeatureSlides(-1)">&#10094;</button>
+                <div class="feature-slide">
+                    <img src="1.png" alt="Feature Slide 1">
+                </div>
+                <button class="next" onclick="plusFeatureSlides(1)">&#10095;</button>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                
+                <div class="social-icons">
+                    
+                   <i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            <form id="contactForm" onsubmit="submitForm(); return false;">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <!-- Sponsor logos section -->
+        <section class="sponsor-logos">
+            <img src="hexom.png" alt="Hexom Logo">
+            <img src="foom.png" alt="Foom Logo">
+            <img src="liquid.png" alt="Liquid Logo">
+            <img src="vapezoo.png" alt="Vapezoo Logo">
+            <img src="vape.png" alt="Vape Logo">
+        </section>
+        <div class="notification" id="notification"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 VapeSTORE. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function submitForm() {
+            var formData = new FormData(document.getElementById("contactForm"));
+            fetch("https://docs.google.com/spreadsheets/d/1vJvIpOe6Bkzuee5U9VO_67rk5TqkjRw8o5e7ct18U3w/edit?usp=sharing", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert("Form submitted successfully!");
+                } else {
+                    throw new Error("Form submission failed!");
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+        }
+    </script>
+
+    <script src="java.js"></script>
+    <script src="slider.js"></script>
+    <script src="pesan.js"></script>
+</body>
+</html>
